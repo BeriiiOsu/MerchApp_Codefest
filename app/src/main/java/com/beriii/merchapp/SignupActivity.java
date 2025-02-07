@@ -47,6 +47,7 @@ public class SignupActivity extends AppCompatActivity {
                 if(database.insertUserSiqnUp(username, email, pass)){
                     Toast.makeText(SignupActivity.this, "Sign up Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     finish();
                 }else{
                     Toast.makeText(SignupActivity.this, "Sign up Failed!", Toast.LENGTH_SHORT).show();
@@ -58,6 +59,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
         });

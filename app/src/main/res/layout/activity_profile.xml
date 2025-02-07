@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivityScreen">
-
+    tools:context=".ProfileActivity">
 
     <RelativeLayout
         android:background="@color/black"
@@ -19,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
+            android:text="Profile"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
             android:textSize="25sp"
@@ -28,25 +27,9 @@
 
     </RelativeLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
-    <include
-        android:layout_width="match_parent"
+    <include android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         layout="@layout/nav_bar"/>
-
-
 
 </RelativeLayout>

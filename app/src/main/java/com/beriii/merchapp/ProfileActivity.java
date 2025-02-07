@@ -1,10 +1,10 @@
 package com.beriii.merchapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,45 +12,44 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
-    RelativeLayout loginBtn, signupBtn;
-    TextView forgotpassBtn;
+    RelativeLayout homeBtn, cartBtn, profileBtn;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        loginBtn = findViewById(R.id.loginBtn);
-        signupBtn = findViewById(R.id.signupBtn);
-        forgotpassBtn = findViewById(R.id.forgotpassBtn);
+        homeBtn = findViewById(R.id.homeBtn);
+        cartBtn = findViewById(R.id.cartBtn);
+        profileBtn = findViewById(R.id.profileBtn);
 
-
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, MainActivityScreen.class));
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 finish();
             }
         });
 
-        signupBtn.setOnClickListener(new View.OnClickListener() {
+        cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SignupActivity.class));
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, CartActivity.class));
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 finish();
             }
         });
-
 
     }
 }

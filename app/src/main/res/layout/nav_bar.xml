@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    >
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/homeBtn"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/baseline_home_24"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="30dp"/>
+
+        <RelativeLayout
+            android:id="@+id/cartBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shopping_cart"
+            android:layout_gravity="center"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="30dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/profileBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/profile_icon"
+            android:layout_gravity="center"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="30dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
