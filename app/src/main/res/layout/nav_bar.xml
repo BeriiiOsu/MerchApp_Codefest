@@ -18,8 +18,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/baseline_home_24"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="30dp"/>
+            android:layout_marginEnd="80dp"
+            />
 
         <RelativeLayout
             android:id="@+id/cartBtn"
@@ -27,8 +27,7 @@
             android:layout_height="40dp"
             android:background="@drawable/shopping_cart"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginEnd="80dp"
             />
 
         <RelativeLayout
@@ -37,8 +36,6 @@
             android:layout_height="40dp"
             android:background="@drawable/profile_icon"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="30dp"
             />
 
     </LinearLayout>
