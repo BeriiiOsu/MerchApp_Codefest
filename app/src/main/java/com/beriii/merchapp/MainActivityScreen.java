@@ -11,7 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivityScreen extends AppCompatActivity {
 
@@ -33,6 +37,16 @@ public class MainActivityScreen extends AppCompatActivity {
         homeBtn = findViewById(R.id.homeBtn);
         cartBtn = findViewById(R.id.cartBtn);
         profileBtn = findViewById(R.id.profileBtn);
+
+        List<item> items = new ArrayList<>();
+        items.add(new item("SHIRT", 599.69, R.drawable.shirt));
+        items.add(new item("POLO", 1699.99, R.drawable.polo));
+        items.add(new item("THUMBLER", 699.50, R.drawable.thumbler));
+        items.add(new item("PEN", 49.99, R.drawable.pen));
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new itemAdapter(getApplicationContext(), items));
 
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
